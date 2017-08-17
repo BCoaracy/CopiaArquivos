@@ -11,9 +11,14 @@ namespace CopyFiles
     {
         List<int> empresasECF = new List<int>();
 
-        public void addEmpresa(List<int> empresas, int numEmpresa)
+        public void AddEmpresa(List<int> empresas, int numEmpresa)
         {
             empresas.Add(numEmpresa);
+        }
+
+        public void RemoveEmpresa(List<int> empresas, int numEmpresa)
+        {
+            empresas.Remove(numEmpresa);
         }
 
     }

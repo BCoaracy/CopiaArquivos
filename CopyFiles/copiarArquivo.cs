@@ -36,17 +36,21 @@ namespace CopyFiles
             return caminho;
         }
 
-        public void executarCopia()
+        public void executarCopia(List<int> empresasList)
         {
             string caminho;
             string pastaEmpresa;
             caminho = getCaminho();
-
-            if (!Directory.Exists(getCaminho()))
+            foreach (var EMPRESA in empresasList)
             {
-                Directory.CreateDirectory(getCaminho());
+                string novoCaminho = caminho + EMPRESA;
+                if (!Directory.Exists(getCaminho()))
+                {
+                    Directory.CreateDirectory(getCaminho());
+                }
+                System.IO.File.Copy(getSourceFile(), novoCaminho);
             }
-            System.IO.File.Copy(getSourceFile(), caminho);
+            
         }
         
     }

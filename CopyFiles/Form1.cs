@@ -24,20 +24,21 @@ namespace CopyFiles
         }
         private void button1_Click(object sender, EventArgs e)
         {
+           
             var oCopiarArquivo = new copiarArquivo();
-
+            
             if (empresasNFCE.Checked)
             {
-                
+                oCopiarArquivo.executarCopia();
             }
 
-            oCopiarArquivo.executarCopia();
+           
 
         }
 
         private void empresasNFCE_CheckedChanged(object sender, EventArgs e)
         {
-
+            List<int> empresas = new List<int>();
         }
     }
 }
