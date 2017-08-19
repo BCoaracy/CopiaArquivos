@@ -26,7 +26,7 @@ namespace CopyFiles
         {
            
             var oCopiarArquivo = new copiarArquivo();
-            
+
             if (empresasNFCE.Checked)
             {
                 oCopiarArquivo.executarCopia();
