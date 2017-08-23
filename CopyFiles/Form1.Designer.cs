@@ -30,8 +30,9 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.empresasNFCE = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.outraEmpresa = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtOutraEmpresa = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -54,17 +55,17 @@
             this.empresasNFCE.TabStop = false;
             this.empresasNFCE.Text = "ECF/NFC-e";
             this.empresasNFCE.UseVisualStyleBackColor = true;
-            this.empresasNFCE.CheckedChanged += new System.EventHandler(this.empresasNFCE_CheckedChanged);
             // 
-            // checkBox1
+            // outraEmpresa
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(12, 79);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(118, 17);
-            this.checkBox1.TabIndex = 2;
-            this.checkBox1.Text = "Todas as empresas";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.outraEmpresa.AutoSize = true;
+            this.outraEmpresa.Location = new System.Drawing.Point(12, 79);
+            this.outraEmpresa.Name = "outraEmpresa";
+            this.outraEmpresa.Size = new System.Drawing.Size(58, 17);
+            this.outraEmpresa.TabIndex = 2;
+            this.outraEmpresa.TabStop = false;
+            this.outraEmpresa.Text = "Outra: ";
+            this.outraEmpresa.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -75,13 +76,21 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Grupo de Empresas";
             // 
+            // txtOutraEmpresa
+            // 
+            this.txtOutraEmpresa.Location = new System.Drawing.Point(76, 77);
+            this.txtOutraEmpresa.Name = "txtOutraEmpresa";
+            this.txtOutraEmpresa.Size = new System.Drawing.Size(100, 20);
+            this.txtOutraEmpresa.TabIndex = 4;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.txtOutraEmpresa);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.outraEmpresa);
             this.Controls.Add(this.empresasNFCE);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
@@ -95,8 +104,9 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.CheckBox empresasNFCE;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox outraEmpresa;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtOutraEmpresa;
     }
 }
 

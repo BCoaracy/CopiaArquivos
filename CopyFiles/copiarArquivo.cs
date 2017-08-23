@@ -11,7 +11,7 @@ namespace CopyFiles
     {
         
         static string nomeArquivo = "NectarECF 5.0.3.37 Update.exe";
-        static string sourcePath = @"N:\Arquivos temporários\NectarECF";
+        static string sourcePath = @"N:\Arquivos temporários\NectarECF\ArquivosAtualizacao\";
         static string targetPath = @"N:\Download para clientes\";
         string caminho = targetPath;
 
@@ -44,13 +44,26 @@ namespace CopyFiles
             foreach (var EMPRESA in empresasList)
             {
                 string novoCaminho = caminho + EMPRESA;
-                if (!Directory.Exists(getCaminho()))
+                if (!Directory.Exists(novoCaminho))
                 {
-                    Directory.CreateDirectory(getCaminho());
+                    Directory.CreateDirectory(novoCaminho);
                 }
-                System.IO.File.Copy(getSourceFile(), novoCaminho);
+                System.IO.File.Copy(novoCaminho, getSourceFile());
             }
             
+        }
+
+        public void executarCopia(string numEmpresa)
+        {
+            string caminho;
+            caminho = getCaminho();
+            string novoCaminho = caminho + numEmpresa;
+            if (!Directory.Exists(novoCaminho))
+            {
+                Directory.CreateDirectory(novoCaminho);
+            }
+            string sFile = getSourceFile();
+            System.IO.File.Copy(novoCaminho, sFile, true);
         }
         
     }

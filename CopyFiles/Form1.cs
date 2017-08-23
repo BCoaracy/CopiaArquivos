@@ -18,27 +18,28 @@ namespace CopyFiles
         
         public Form1()
         {
-            
-
             InitializeComponent();
+
         }
         private void button1_Click(object sender, EventArgs e)
         {
-           
             var oCopiarArquivo = new copiarArquivo();
+            var oEmpresa = new Empresas();
+
+            List<int> listaDeEmpresas = new List<int>();
+            listaDeEmpresas = oEmpresa.empresasECF;
 
             if (empresasNFCE.Checked)
             {
-                oCopiarArquivo.executarCopia();
+                oCopiarArquivo.executarCopia(listaDeEmpresas);
             }
 
-           
+            if (outraEmpresa.Checked)
+            {
+                oCopiarArquivo.executarCopia(txtOutraEmpresa.Text);
+            }
 
         }
 
-        private void empresasNFCE_CheckedChanged(object sender, EventArgs e)
-        {
-            List<int> empresas = new List<int>();
-        }
     }
 }
